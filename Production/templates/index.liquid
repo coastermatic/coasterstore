@@ -54,21 +54,28 @@
 <!-- Packaged Sets -->
         <article class="collection-list-item {{ settings.collections-list-position }}">
           <a id="packaged" href="{{ collections[settings.featured-collection-1].url }}">
-            {{ 'img_package_sets_off.jpg' | asset_url  | img_tag: 'Packaged Coasters'}}
-            <h2>Packaged Sets</h2>
+            {{ 'img_package_sets_off.jpg' | asset_url  | img_tag: 'Designer Coasters'}}
+            <h2>Designer Coasters</h2>
           </a>
          
-           <div class="rte">Don’t feel like designing your own? <br/>
-            <a href="{{ collections[settings.featured-collection-1].url }}">Choose from one of our package sets.</a></div>
+           <div class="rte" style="margin:0px;">
+             <p class="product-price" style="margin:0px;">$45.00</p>Don’t feel like designing your own? <br/>
+            <a href="{{ collections[settings.featured-collection-1].url }}">Choose from one of our designer sets.</a>
+          
+          </div>
         </article>
 
 <!-- Make your own set -->  
           <article class="collection-list-item centered">
           <a id="select" href="https://instagram.com/oauth/authorize/?client_id=7575c8b919d64f258ce7a4032a35e3d9&redirect_uri=http://coastermatic.com/products/instagram-coasters&response_type=token">
            {{ 'img_make_your_own_off.jpg' | asset_url  | img_tag: 'DIY Coasters'}}
-            <h2>Start a set <br/> with Instagram</h2>
+            <h2>Instagram Coasters</h2>
           </a>
-            <div class="rte"><a class="inline" href="https://instagram.com/oauth/authorize/?client_id=7575c8b919d64f258ce7a4032a35e3d9&redirect_uri=http://coastermatic.com/products/instagram-coasters&response_type=token">Design a set</a> with moments from your Instagram account.</div>
+            <div class="rte" style="margin:0px;">
+              <p class="product-price" style="margin:0px;">$49.00</p>
+              <a class="inline" href="https://instagram.com/oauth/authorize/?client_id=7575c8b919d64f258ce7a4032a35e3d9&redirect_uri=http://coastermatic.com/products/instagram-coasters&response_type=token">Make a set</a> with moments from your Instagram account.
+            
+            </div>
 
       </article> 
 
@@ -84,12 +91,15 @@
         <!-- Gift Card -->
           <article class="collection-list-item centered">
           <a id="gift-card" class="holder" href="{{ shop.url }}/products/gift-card">
-            {{ 'img_hm_gift-card.png' | asset_url  | img_tag: 'Coaster Gift Card'}}
-            <h2>Give a Gift Card</h2>
+            {{ 'img_hm_gift-card.jpg' | asset_url  | img_tag: 'Coaster Gift Card'}}
+            <h2>Gift Cards</h2>
           </a>
       
-            <div class="rte">Looking for an easy gift?<br/>
-           <a href="{{ shop.url }}/products/gift-card">Send them a gift-card.</a></div>
+            <div class="rte" style="margin:0px;">
+              <p class="product-price" style="margin:0px;">from $49.00</p>
+              Looking for an easy gift?<br/>
+           <a href="{{ shop.url }}/products/gift-card">Send them a gift-card.</a>
+            </div>
         </article> 
       {% endif %}
 
@@ -117,8 +127,8 @@
         <div class="product-specs">
         <h4>The Coaster Low Down</h4>
         <ul>
-          <li>$50 for Instagram coasters</li>
-          <li>$45 for packaged sets</li>
+          <li>$49 for Instagram coasters</li>
+          <li>$45 for Designer coasters</li>
           <li>Free USA shipping </li>
           <li>4 coasters per set</li>
           <li>4 1/4" diameter, 3/8" thick, round coasters</li>
