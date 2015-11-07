@@ -43,7 +43,7 @@
     {{ 'cm_cart.css' | asset_url | stylesheet_tag }}
   {% endif %}
 
-  {% if product.handle == 'instagram-coasters' or product.handle == 'single-coaster'%}
+  {% if product.handle == 'instagram-coasters' or product.handle == 'photo-upload'%}
     {{ 'cm_select.css' | asset_url | stylesheet_tag }}
   {% endif %}
 
@@ -179,7 +179,7 @@ TW DISABLED - need to figure out product page stats, and also it messes up our s
   </script>
   
   
-{% if product.handle == 'instagram-coasters' or product.handle == 'single-coaster' or template == 'cart'%}
+{% if product.handle == 'instagram-coasters' or product.handle == 'photo-upload' or template == 'cart'%}
  <!-- no olark -->
 {% else %}
 	<!-- olark -->
