@@ -5,21 +5,21 @@
   var DIAMETER = 640;
   var PREVIEW_DIAMETER = Math.min(screen.width-20, 400);
 
-  // photo-upload, set of 4 variant = 7432867779;
-  // pair clone variant = 10425593923;
+  // photo-upload, set of 4 variant = 328766209;
+  // pair clone variant = 10745065348;
 
   var PRODUCT_VARIANT = document.getElementById("variant-id").value;
   var SET_SIZE = 4;
 
   // if Photo Pair, reset to 2 coasters
-    if (PRODUCT_VARIANT == 10425593923){
+    if (PRODUCT_VARIANT == 10745065348){
     var SET_SIZE = 2;
 
     //remove last 2 li from shortlist
     $("li.2").hide();
     $("li.3").hide();
     $("div#shortlist_container ul").width("525");
-    $("span#price").html("$30");
+    $("span#price").html("$29");
     }
 
   // setup event handlers, controller scope
@@ -171,7 +171,7 @@
         $("#add-to-cart").fadeOut();
         $("#add-coasters").fadeOut();
         $("span#price").html("$49");
-        PRODUCT_VARIANT = 7432867779;
+        PRODUCT_VARIANT = 328766209;
     });
 
     // initial render

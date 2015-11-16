@@ -6,20 +6,35 @@
   {% assign item = prod %}
 {% endif %}
 
-<article class="product-list-item" id="product-list-item-{{ item.id }}">
 
-  <figure class="thumbnail">
-    <a href="{{ item.url | within: collection }}">
+
+
+<article class="product-list-item" id="product-list-item-{{ item.id }}">
+<figure class="thumbnail">
+ 
+    {% if item.handle == 'instagram-coasters' %}
+    <a href="https://instagram.com/oauth/authorize/?client_id=7575c8b919d64f258ce7a4032a35e3d9&amp;redirect_uri=http://coastermatic.com/products/instagram-coasters&amp;response_type=token">
+    {% else %}
+    <a href="{{ item.url }}">
+    {% endif %}
+
+    
     {% if item.featured_image.src.size > 0 %}
     <img src="{{ item.featured_image.src | product_img_url: 'grande' }}" alt="{{ item.featured_image.alt | escape }}" />
     {% else %}
     <img class="product-no-images" src="{{ 'no-image.svg' | asset_url }}" alt="No Image Available" />
     {% endif %}
+
     </a>
   </figure>
 
   <div class="product-list-details">
-    <p class="title"><a href="{{ item.url | within: collection }}">{{ item.title }}</a></p>
+  {% if item.handle == 'instagram-coasters' %}
+   <p class="title"><a href="https://instagram.com/oauth/authorize/?client_id=7575c8b919d64f258ce7a4032a35e3d9&amp;redirect_uri=http://coastermatic.com/products/instagram-coasters&amp;response_type=token">{{ item.title }}</a></p>  
+    {% else %}
+    <p class="title"><a href="{{ item.url }}">{{ item.title }}</a></p>
+    {% endif %}
+  
     <p class="vendor">by {{ item.vendor }}</p>
     <p class="product-price">
     {% if item.available %}
@@ -35,3 +50,4 @@
   </div>
 
 </article>
+

@@ -22,9 +22,11 @@ var cropArray = new Array();
           {% comment %}
           product id: 143905455 = instagram coasters
           product id: 3465266116 = photo coasters
+          product id: 3615398404 = photo pairs
+          
           {% endcomment %}
 
-        {% if item.product.id == 143905455 or 3465266116 %}
+        {% if item.product.id == 143905455 or 3465266116 or 3615398404%}
       
             <!-- write image list -->
             {% for p in item.properties %}
