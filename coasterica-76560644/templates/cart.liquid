@@ -26,7 +26,7 @@ var cropArray = new Array();
           
           {% endcomment %}
 
-        {% if item.product.id == 143905455 or 3465266116 or 3615398404%}
+        {% if item.product.id == 143905455 or item.product.id == 3465266116 or item.product.id == 3615398404 %}
       
             <!-- write image list -->
             {% for p in item.properties %}
@@ -36,40 +36,29 @@ var cropArray = new Array();
             {% endfor %}
          
             <script>
-      
-            {% for p in item.properties %}
-        
-              {% if p.first contains 'crop' %}
+              {% for p in item.properties %}
+                 {% if p.first contains 'crop' %}
                      //push crop value for each li into array
                      cropArray.push({{ p.last }});
-              {% endif %}
-      
-            {% endfor %}
-      
+                {% endif %}
+              {% endfor %}
             </script>
+            
           {% elsif item.product.id == 386606572 %}
-
-          {% comment %}
-          product id: 386606572 = single-coaster
-          {% endcomment %}
+            {% comment %}
+            product id: 386606572 = single-coaster
+            {% endcomment %}
         
           <li class="single" style="background-image: url({{ item.properties.img_1_url }});"></li>
-
-           
-         
-            <script>
-      
+           <script>
             {% for p in item.properties %}
-        
               {% if p.first contains 'crop' %}
                      //push crop value for each li into array
                      cropArray.push({{ p.last }});
               {% endif %}
-      
             {% endfor %}
-      
             </script>
-        {% else %}
+         {% else %}
                 
           {% for image in item.product.images %}
             {% if image.alt contains 'cart' %}

@@ -18,7 +18,7 @@
     //remove last 2 li from shortlist
     $("li.2").hide();
     $("li.3").hide();
-    $("div#shortlist_container ul").width("525");
+    $("div#shortlist_container ul").addClass("pair");
     $("span#price").html("$29");
     }
 
