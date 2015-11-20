@@ -67,13 +67,13 @@
 
 <!-- Make your own set -->  
           <article class="collection-list-item centered">
-          <a id="select" href="http://coastermatic.com/pages/start-a-set">
+          <a id="select" href="{{ shop.url }}/collections/custom-coasters">
            {{ 'img_make_your_own_off.jpg' | asset_url  | img_tag: 'DIY Coasters'}}
             <h2>Custom Coasters</h2>
           </a>
             <div class="rte" style="margin:auto;">
-              <p class="product-price" style="margin:0px;">$49.00</p>
-              <a class="inline" href="http://coastermatic.com/pages/start-a-set">Make a set</a> with moments from Instagram or upload from your desktop or phone.
+              <p class="product-price" style="margin:0px;">from $29.00</p>
+              <a class="inline" href="{{ shop.url }}/collections/custom-coasters">Make a set</a> of 2 or 4 coasters with moments from Instagram or upload from your desktop or phone.
             
             </div>
 
@@ -96,9 +96,9 @@
           </a>
       
             <div class="rte" style="margin:auto;">
-              <p class="product-price" style="margin:auto;">from $49.00</p>
-              Looking for an easy gift?<br/>
-           <a href="{{ shop.url }}/products/gift-card">Send them a gift-card.</a>
+              <p class="product-price" style="margin:auto;">from $29.00</p>
+              Can't decide? Let them choose with a Coastermatic gift card.<br/>
+           <a href="{{ shop.url }}/products/gift-card">Send them a giftcard.</a>
             </div>
         </article> 
       {% endif %}

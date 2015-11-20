@@ -106,7 +106,7 @@
         var SLIDER_MAX = $cropview.cropper("getCropBoxData").width / DIAMETER * Math.max(img.width, img.height);
         
         if (SLIDER_MAX > PREVIEW_DIAMETER){
-          console.log("yes slider");
+          //console.log("yes slider");
           $('span.slider_msg').show();
 
             if(slider.noUiSlider) { slider.noUiSlider.destroy(); }
@@ -116,13 +116,13 @@
             });
             slider.noUiSlider.on("set", function(vals){
               var val = Number(vals[0]);
-              console.log(val, typeof val);
+              //console.log(val, typeof val);
               $("#crop-view > img").cropper("setCanvasData", { "left": 0, "top": 0, "width": 0+val, "height": 0+val});
-              console.log($("#crop-view > img").cropper("getCanvasData"));
+              //console.log($("#crop-view > img").cropper("getCanvasData"));
             });
 
         } else {
-          console.log("no slider");
+          //console.log("no slider");
           if(slider.noUiSlider) { slider.noUiSlider.destroy(); }
           $('span.slider_msg').hide();
         }
@@ -191,9 +191,9 @@
     });
 
     var xhr = new XMLHttpRequest();
-    xhr.addEventListener("load", function(e) { console.log("load", e); loadCart(); }, false);
-    xhr.addEventListener("error", function(e) { console.log("error", e); Shopify.onError(xhr, "failed"); }, false);
-    xhr.addEventListener("abort", function(e) { console.log("abort", e); Shopify.onError(xhr, "aborted"); }, false);
+    xhr.addEventListener("load", function(e) { /*console.log("load", e);*/ loadCart(); }, false);
+    xhr.addEventListener("error", function(e) { /*console.log("error", e);*/ Shopify.onError(xhr, "failed"); }, false);
+    xhr.addEventListener("abort", function(e) { /*console.log("abort", e);*/ Shopify.onError(xhr, "aborted"); }, false);
     xhr.open("POST", "/cart/add");
     xhr.send(formdata);
   };
